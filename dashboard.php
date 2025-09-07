@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="content-grid">
-    <div class="dashboard-title">Dashboard</div>
+    <div class="page-title">Dashboard</div>
      <img class="dashboard-banner" src="images/aboutus.png" alt="About MEDIGAP">
     <div class="calendar">
       <div class="calendar-header">AUGUST 2025</div>

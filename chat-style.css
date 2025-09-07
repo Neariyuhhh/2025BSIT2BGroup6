@@ -1,0 +1,228 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.page-wrapper {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+.page-layout {
+    flex-grow: 1;
+    display: flex;
+}
+
+.chat-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.doctor-sidebar {
+    width: 320px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.doctor-list {
+    overflow-y: auto;
+}
+
+.doctor-contact {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+.doctor-contact:hover {
+    background-color: #f9f9f9;
+}
+.doctor-contact.active {
+    background-color: #e8f0fe;
+}
+
+.profile-pic-container {
+    position: relative;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.doctor-contact img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.active-dot {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.contact-info {
+    flex-grow: 1;
+    min-width: 0;
+}
+.contact-info h4,
+.contact-info p {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.contact-info h4 {
+    margin: 0;
+    font-size: 1em;
+}
+.contact-info p {
+    margin: 5px 0 0;
+    font-size: 0.85em;
+    color: #777;
+}
+
+.chat-area {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column; 
+    background-color: #e5ddd5;
+}
+
+.chat-header {
+    padding: 15px 20px;
+    background-color: #f0f2f5;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+.chat-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.chat-header .back-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex-grow: 1; 
+    padding: 20px;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.message.received {
+    background-color: #ffffff;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+}
+
+.message.sent {
+    background-color: #003B5C; 
+    color: white; 
+    align-self: flex-end; 
+    border-top-right-radius: 0;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #f0f2f5;
+    border-top: 1px solid #ddd;
+}
+.chat-input input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #003B5C;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+
+@media (max-width: 768px) {
+    .chat-container {
+        overflow-x: hidden;
+        display: block;
+    }
+    .doctor-sidebar {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; 
+        z-index: 20;
+        transition: left 0.3s ease-in-out;
+    }
+    .chat-area {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+        transition: left 0.3s ease-in-out;
+    }
+    .chat-container.show-chat-area .doctor-sidebar {
+        left: -100%;
+    }
+    .chat-container.show-chat-area .chat-area {
+        left: 0;
+        z-index: 30;
+    }
+    .chat-header .back-button {
+        display: block;
+    }
+}

@@ -14,7 +14,7 @@
             <h3>Profile</h3>
             <div class="settings-option">
                 <span>
-                    <img src="images/man.png" alt="Profile Icon" class="settings-icon">
+                    <img src="images/devicon.png" alt="Profile Icon" class="settings-icon">
                     Change profile photo
                 </span>
             </div>

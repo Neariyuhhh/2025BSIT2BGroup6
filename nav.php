@@ -6,22 +6,22 @@
       <img src="images/homeicon.png" alt="Dashboard Icon" class="nav-icon"> Dashboard
     </a>
     <div class="nav-underline"></div>
-    <a href="staff.php" class="nav-item">
-      <img src="images/stafficon.png" alt="Staff Icon" class="nav-icon"> Staff
+    <a href="patient.php" class="nav-item">
+      <img src="images/patienticon.png" alt="Staff Icon" class="nav-icon"> Patient
     </a>
     <div class="nav-underline"></div>
-    <a href="doctor.php" class="nav-item">
-      <img src="images/doctorsicon.png" alt="Doctor Icon" class="nav-icon"> Doctor
+    <a href="doctorstaff.php" class="nav-item">
+      <img src="images/doctorstafficon.png" alt="Doctor Icon" class="nav-icon"> Doctors & Staffs
     </a>
     <div class="nav-underline"></div>
   </div>
   <div class="nav-section">
     <p class="section-title">Virtual services:</p>
-    <a href="#" class="nav-item">
+    <a href="https://meet.google.com/kjh-mfdq-jzs" class="nav-item">
       <img src="images/videoicon.png" alt="Video Icon" class="nav-icon"> Video
     </a>
     <div class="nav-underline"></div>
-    <a href="#" class="nav-item">
+    <a href="chat.php" class="nav-item">
       <img src="images/chaticon.png" alt="Chat Icon" class="nav-icon"> Chat
     </a>
     <div class="nav-underline"></div>

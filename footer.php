@@ -31,6 +31,6 @@
     </div>
   </div>
 </div>
-<script src="assets/js/script.js"></script>
+<script src="<?php echo $pathToRoot; ?>assets/js/script.js"></script>
 </body>
 </html>
